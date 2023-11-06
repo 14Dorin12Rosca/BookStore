@@ -20,11 +20,6 @@ builder.Services.AddRouting(options =>
      options.LowercaseUrls = true;
 });
 
-//Add DataBase Context
-builder.Services.AddDbContext<BookStoreDbContext>(options =>
-{
-     options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDbConnection"));
-});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -59,6 +54,12 @@ builder.Services.AddSwaggerGen(c =>
      //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     // c.IncludeXmlComments(xmlPath);
 
+});
+
+//Add DataBase Context
+builder.Services.AddDbContext<BookStoreDbContext>(options =>
+{
+     options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDbConnection"));
 });
 var app = builder.Build();
 

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using BookStore.Application.Contracts.DataBase;
 using BookStore.DataBase.Common;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.DataBase
 {
@@ -9,7 +10,10 @@ namespace BookStore.DataBase
      {
           public static IServiceCollection AddDatabaseServices(this IServiceCollection services, ConfigurationManager config)
           {
-
+               services.AddDbContextFactory<BookStoreDbContext>(options =>
+               {
+                    options.UseSqlServer(config.GetConnectionString("BookStoreDbConnection"));
+               });
                //Common
                services.AddScoped(typeof(IAddEntity<>), typeof(AddEntity<>));
                services.AddScoped(typeof(IDeleteEntity<>), typeof(DeleteEntity<>));

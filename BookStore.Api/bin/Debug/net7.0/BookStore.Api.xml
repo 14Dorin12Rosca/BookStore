@@ -6,10 +6,51 @@
     <members>
         <member name="M:BookStore.Api.Genre.GenreController.Create(BookStore.Application.Features.Genre.CreateGenreRequest)">
             <summary>
-            Creates a whole new genre.
+            Creates a new genre.
             </summary>
             <param name="request">The request to create a genre.</param>
             <returns>The created genre.</returns>
+        </member>
+        <member name="M:BookStore.Api.Role.RoleController.Create(BookStore.Application.Features.Role.CreateRoleRequest)">
+            <summary>
+            Creates a new Role.
+            </summary>
+            <param name="request">The request to create a Role.</param>
+            <returns>The created Role.</returns>
+        </member>
+        <member name="M:BookStore.Api.Role.RoleController.Get(System.Guid)">
+            <summary>
+            Get a role by id.
+            </summary>
+            <param name="id">The Id of requested role.</param>
+            <returns>The Role data if it exist.</returns>
+        </member>
+        <member name="M:BookStore.Api.Role.RoleController.Get">
+            <summary>
+            Get a list of roles.
+            </summary>
+            <returns>The Role data if it exist.</returns>
+        </member>
+        <member name="M:BookStore.Api.User.RegisterController.Create(BookStore.Application.Features.User.CreateUserRequest)">
+            <summary>
+            Register a new user.
+            </summary>
+            <param name="request">The request to create a user.</param>
+            <returns>The created user data</returns>
+        </member>
+        <member name="M:BookStore.Api.User.UserController.Login(BookStore.Application.Features.Login.LoginRequest)">
+            <summary>
+            Login into System.
+            </summary>
+            <param name="request">The request to login.</param>
+            <returns>The Jwt token of user</returns>
+        </member>
+        <member name="M:BookStore.Api.User.UserController.SetRole(BookStore.Application.Features.User.SetRoleRequest)">
+            <summary>
+            Set User Role.
+            </summary>
+            <param name="request">The request to pass user email and role id.</param>
+            <returns>The user data</returns>
         </member>
     </members>
 </doc>

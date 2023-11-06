@@ -5,6 +5,9 @@ using Microsoft.OpenApi.Models;
 using BookStore.DataBase;
 using Microsoft.EntityFrameworkCore;
 using BookStore.Application.Middleware;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,6 +67,22 @@ builder.Services.AddDbContext<BookStoreDbContext>(options =>
 {
      options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDbConnection"));
 });
+builder.Services.AddAuthentication(x =>
+{
+     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+     x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+     x.TokenValidationParameters = new TokenValidationParameters
+     {
+          ValidateIssuer = true,
+          ValidateAudience = true,
+          ValidateLifetime = true,
+          ValidateIssuerSigningKey = true,
+          ValidIssuer = builder.Configuration["Jwt:Issuer"],
+          ValidAudience = builder.Configuration["Jwt:Audience"],
+          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException()))
+     });
 var app = builder.Build();
 
 //Add Exception Middleware

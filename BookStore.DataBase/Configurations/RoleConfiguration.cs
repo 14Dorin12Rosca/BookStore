@@ -14,7 +14,7 @@ namespace BookStore.DataBase.Configurations
                builder.Property(u => u.Name).IsRequired().HasMaxLength(64).HasColumnType("varchar(64)");
 
                //Foreign Keys
-               builder.HasMany(r => r.Users).WithOne(u => u.Role).HasForeignKey(u => u.RoleId);
+               builder.HasMany(r => r.Users).WithOne(u => u.Role).HasForeignKey(u => u.RoleId).IsRequired(false);
           }
      }
 }

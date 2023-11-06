@@ -12,12 +12,12 @@ namespace BookStore.DataBase.Common
                _factory = factory;
           }
 
-          public async Task<bool> InsertAsync(TEntity entity)
+          public async Task<TEntity?> InsertAsync(TEntity entity)
           {
                await using var ctx = await _factory.CreateDbContextAsync(); 
                await ctx.Set<TEntity>().AddAsync(entity);
                var affectedRows = await ctx.SaveChangesAsync();
-               return affectedRows > 0;
+               return affectedRows > 0 ? entity : null;
           }
      }
 }

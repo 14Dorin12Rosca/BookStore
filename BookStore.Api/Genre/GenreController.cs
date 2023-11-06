@@ -1,6 +1,7 @@
 ﻿using BookStore.Application.Features.Genre;
-using BookStore.Application.Features.Genre.Commands;
+using BookStore.Application.Features.Genre.Commands.Add;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -19,14 +20,16 @@ namespace BookStore.Api.Genre
           }
 
           /// <summary>
-          /// Creates a whole new genre.
+          /// Creates a new genre.
           /// </summary>
           /// <param name="request">The request to create a genre.</param>
           /// <returns>The created genre.</returns>
-          [HttpPost]
           [SwaggerResponse(StatusCodes.Status200OK, "The created genre", typeof(GenreDto))]
           [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
+          [SwaggerResponse(StatusCodes.Status401Unauthorized, "Unauthorized action")]
+          [SwaggerResponse(StatusCodes.Status500InternalServerError, "Database Error")]
           [HttpPost]
+          [Authorize(Roles = "Admin")]
           public async Task<IActionResult> Create([FromBody] CreateGenreRequest request)
           {
                var cmd = new AddGenreCommand(request);

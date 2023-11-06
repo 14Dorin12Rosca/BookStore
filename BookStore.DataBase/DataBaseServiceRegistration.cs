@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using BookStore.Application.Contracts.DataBase;
+using BookStore.Application.Contracts.User;
 using BookStore.DataBase.Common;
+using BookStore.DataBase.User;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.DataBase
@@ -21,6 +23,11 @@ namespace BookStore.DataBase
                services.AddScoped(typeof(ISelectAll<>), typeof(SelectAll<>));
                services.AddScoped(typeof(ISelectAllAsQueryable<>), typeof(SelectAllAsQueryable<>));
                services.AddScoped(typeof(IUpdateEntity<>), typeof(UpdateEntity<>));
+               //User
+               services.AddScoped(typeof(IGetUserByEmail), typeof(GetUserByEmail));
+               services.AddScoped(typeof(ISetUserRole), typeof(SetUserRole));
+
+
                return services;
           }
      }

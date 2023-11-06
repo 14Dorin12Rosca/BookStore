@@ -169,13 +169,7 @@ namespace BookStore.DataBase.Migrations
                         .HasColumnType("varchar(max)");
 
                     b.Property<Guid?>("RoleId")
-                        .IsRequired()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
 
                     b.HasKey("Id");
 
@@ -222,9 +216,7 @@ namespace BookStore.DataBase.Migrations
                 {
                     b.HasOne("BookStore.Domain.Entities.Role", "Role")
                         .WithMany("Users")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoleId");
 
                     b.Navigation("Role");
                 });

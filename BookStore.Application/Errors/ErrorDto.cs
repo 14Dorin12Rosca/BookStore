@@ -7,7 +7,7 @@ namespace BookStore.Application.Errors
      {
           public int StatusCode { get; set; }
 
-          public string Message { get; set; }
+          public string? Message { get; set; }
 
           public IEnumerable<ValidationFailure>? ValidationErrors { get; set; }
           public override string ToString()

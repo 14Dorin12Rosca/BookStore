@@ -95,10 +95,9 @@ namespace BookStore.DataBase.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserName = table.Column<string>(type: "varchar(64)", maxLength: 64, nullable: false),
                     Email = table.Column<string>(type: "varchar(64)", maxLength: 64, nullable: false),
                     Password = table.Column<string>(type: "varchar(max)", nullable: false),
-                    RoleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    RoleId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -107,8 +106,7 @@ namespace BookStore.DataBase.Migrations
                         name: "FK_User_Role_RoleId",
                         column: x => x.RoleId,
                         principalTable: "Role",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

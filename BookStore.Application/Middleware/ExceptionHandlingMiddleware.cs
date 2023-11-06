@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using BookStore.Application.Errors;
+using BookStore.Application.Exceptions;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
@@ -23,7 +24,7 @@ namespace BookStore.Application.Middleware
                {
                     await next(context);
                }
-               catch (KeyNotFoundException ex)
+               catch (KeyNotFoundException)
                {
                     await HandleExceptionAsync(context,
                          HttpStatusCode.NotFound, "NotFound");
@@ -34,8 +35,18 @@ namespace BookStore.Application.Middleware
                          HttpStatusCode.BadRequest, "BadRequest",
                          ex.Errors);
                }
+               catch (NotFoundException)
+               {
+                    await HandleExceptionAsync(context,
+                         HttpStatusCode.NotFound, "NotFound");
+               }
+               catch (DataBaseErrorException)
+               {
+                    await HandleExceptionAsync(context,
+                         HttpStatusCode.ServiceUnavailable, "DataBaseError");
+               }
           }
-          private async Task HandleExceptionAsync(HttpContext context,
+               private async Task HandleExceptionAsync(HttpContext context,
                HttpStatusCode code,
                string message,
                IEnumerable<ValidationFailure>? errors = null)

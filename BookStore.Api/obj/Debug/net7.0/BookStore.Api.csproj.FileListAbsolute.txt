@@ -534,3 +534,6 @@ C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\scop
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.csproj.CopyComplete
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.genruntimeconfig.cache
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\ref\BookStore.Api.dll
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\BookStore.Api.xml
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.xml

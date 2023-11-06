@@ -2,6 +2,7 @@
 using BookStore.Application.Features.Genre.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace BookStore.Api.Genre
 {
@@ -16,6 +17,15 @@ namespace BookStore.Api.Genre
           {
                _mediator = mediator;
           }
+
+          /// <summary>
+          /// Creates a whole new genre.
+          /// </summary>
+          /// <param name="request">The request to create a genre.</param>
+          /// <returns>The created genre.</returns>
+          [HttpPost]
+          [SwaggerResponse(StatusCodes.Status200OK, "The created genre", typeof(GenreDto))]
+          [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
           [HttpPost]
           public async Task<IActionResult> Create([FromBody] CreateGenreRequest request)
           {

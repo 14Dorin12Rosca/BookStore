@@ -1,3 +1,4 @@
+using System.Reflection;
 using BookStore.Application;
 using BookStore.Infrastructure;
 using Microsoft.OpenApi.Models;
@@ -50,9 +51,9 @@ builder.Services.AddSwaggerGen(c =>
           Array.Empty<string>()
      }});
      //Api Documentation
-     //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-     //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    // c.IncludeXmlComments(xmlPath);
+     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+     c.IncludeXmlComments(xmlPath);
 
 });
 

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookStore.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BookStore.Api.Genre.GenreController.Create(BookStore.Application.Features.Genre.CreateGenreRequest)">
+            <summary>
+            Creates a whole new genre.
+            </summary>
+            <param name="request">The request to create a genre.</param>
+            <returns>The created genre.</returns>
+        </member>
+    </members>
+</doc>

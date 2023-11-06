@@ -2,6 +2,7 @@ using BookStore.Application;
 using BookStore.Infrastructure;
 using Microsoft.OpenApi.Models;
 using BookStore.DataBase;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,12 @@ builder.Services.AddRouting(options =>
 {
      options.AppendTrailingSlash = true;
      options.LowercaseUrls = true;
+});
+
+//Add DataBase Context
+builder.Services.AddDbContext<BookStoreDbContext>(options =>
+{
+     options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDbConnection"));
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -8,7 +8,7 @@ namespace BookStore.DataBase
      {
           public virtual DbSet<Author> Author { get; set; }
           public virtual DbSet<Book> Book { get; set; }
-          public virtual DbSet<Genre> Genre { get; set; }
+          public virtual DbSet<Domain.Entities.Genre> Genre { get; set; }
           public virtual DbSet<Role> Role { get; set; }
           public virtual DbSet<Domain.Entities.User> User { get; set; }
 

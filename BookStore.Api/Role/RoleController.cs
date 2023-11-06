@@ -22,10 +22,10 @@ namespace BookStore.Api.Role
           }
 
           /// <summary>
-          /// Creates a new Role.
+          /// creates a new role
           /// </summary>
-          /// <param name="request">The request to create a Role.</param>
-          /// <returns>The created Role.</returns>
+          /// <param name="request">the request to create a role</param>
+          /// <returns>the created role</returns>
           [SwaggerResponse(StatusCodes.Status200OK, "The created Role", typeof(RoleDto))]
           [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
           [HttpPost]
@@ -37,10 +37,10 @@ namespace BookStore.Api.Role
           }
 
           /// <summary>
-          /// Get a role by id.
+          /// get a role by id
           /// </summary>
-          /// <param name="id">The Id of requested role.</param>
-          /// <returns>The Role data if it exist.</returns>
+          /// <param name="id">the id of requested role</param>
+          /// <returns>the role data if it exist</returns>
           [Authorize(Roles = "Admin")]
           [SwaggerResponse(StatusCodes.Status200OK, "The Role data", typeof(RoleDto))]
           [SwaggerResponse(StatusCodes.Status404NotFound, "Requested Role Not Found")]
@@ -54,9 +54,9 @@ namespace BookStore.Api.Role
                return Ok(result);
           }
           /// <summary>
-          /// Get a list of roles.
+          /// get a list of roles.
           /// </summary>
-          /// <returns>The Role data if it exist.</returns>
+          /// <returns>the role data if it exist</returns>
           [Authorize(Roles = "Admin")]
           [SwaggerResponse(StatusCodes.Status200OK, "The Role data", typeof(IEnumerable<RoleDto>))]
           [SwaggerResponse(StatusCodes.Status404NotFound, "Requested Roles Not Found")]

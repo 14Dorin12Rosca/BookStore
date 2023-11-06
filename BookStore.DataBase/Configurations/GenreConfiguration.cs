@@ -1,12 +1,11 @@
-﻿using BookStore.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BookStore.DataBase.Configurations
 {
-     internal class GenreConfiguration :IEntityTypeConfiguration<Genre>
+     internal class GenreConfiguration :IEntityTypeConfiguration<Domain.Entities.Genre>
      {
-          public void Configure(EntityTypeBuilder<Genre> builder)
+          public void Configure(EntityTypeBuilder<Domain.Entities.Genre> builder)
           {
                builder.ToTable(nameof(Genre));
                builder.HasKey(g => g.Id);

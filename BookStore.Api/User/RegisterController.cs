@@ -19,10 +19,10 @@ namespace BookStore.Api.User
           }
 
           /// <summary>
-          /// Register a new user.
+          /// register a new user
           /// </summary>
-          /// <param name="request">The request to create a user.</param>
-          /// <returns>The created user data</returns>
+          /// <param name="request">the request to create a user</param>
+          /// <returns>the created user data</returns>
           [SwaggerResponse(StatusCodes.Status200OK, "The user is created", typeof(RoleDto))]
           [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
           [HttpPost]

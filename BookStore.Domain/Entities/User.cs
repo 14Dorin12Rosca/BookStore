@@ -7,6 +7,6 @@
           public string? Password { get; set; }
           public Guid? RoleId { get; set; }
           public Role? Role { get; set; }
-          public IEnumerable<Book>? Books { get; set; }
+          public ICollection<Book>? Books { get; set; }
      }
 }

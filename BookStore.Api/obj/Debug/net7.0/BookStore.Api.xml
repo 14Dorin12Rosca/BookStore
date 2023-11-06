@@ -11,6 +11,12 @@
             <param name="request">The request to create a genre.</param>
             <returns>The created genre.</returns>
         </member>
+        <member name="M:BookStore.Api.Genre.GenreController.Get">
+            <summary>
+            Get List Of Genres.
+            </summary>
+            <returns> List of Genres </returns>
+        </member>
         <member name="M:BookStore.Api.Role.RoleController.Create(BookStore.Application.Features.Role.CreateRoleRequest)">
             <summary>
             Creates a new Role.

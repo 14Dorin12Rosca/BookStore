@@ -4,9 +4,11 @@ using BookStore.Infrastructure;
 using Microsoft.OpenApi.Models;
 using BookStore.DataBase;
 using Microsoft.EntityFrameworkCore;
+using BookStore.Application.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 // Add services to the container.
 builder.Services.AddControllers();
 // Add Infrastructure layer services
@@ -64,6 +66,8 @@ builder.Services.AddDbContext<BookStoreDbContext>(options =>
 });
 var app = builder.Build();
 
+//Add Exception Middleware
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

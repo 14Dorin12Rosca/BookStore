@@ -14,7 +14,7 @@ namespace BookStore.Application.Features.Book
           public Guid? AuthorId { get; set; }
           public Guid? GenreId { get; set; }
 
-          public Author? Author { get; set; }
+          public Domain.Entities.Author? Author { get; set; }
           public GenreDto? Genre { get; set; }
           public ICollection<UserDto>? Users { get; set; }
      }

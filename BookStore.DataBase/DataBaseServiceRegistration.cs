@@ -1,16 +1,18 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BookStore.Application.Contracts.Author;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using BookStore.Application.Contracts.DataBase;
 using BookStore.Application.Contracts.Genre;
 using BookStore.Application.Contracts.User;
+using BookStore.DataBase.Author;
 using BookStore.DataBase.Common;
 using BookStore.DataBase.Genre;
-using BookStore.DataBase.User;
 using Microsoft.EntityFrameworkCore;
+using BookStore.DataBase.User;
 
 namespace BookStore.DataBase
 {
-     public static class DataBaseServiceRegistration
+    public static class DataBaseServiceRegistration
      {
           public static IServiceCollection AddDatabaseServices(this IServiceCollection services, ConfigurationManager config)
           {
@@ -30,6 +32,8 @@ namespace BookStore.DataBase
                services.AddScoped(typeof(ISetUserRole), typeof(SetUserRole));
                //Genres
                services.AddScoped(typeof(IGetGenres), typeof(GetGenres));
+               //Author
+               services.AddScoped(typeof(IGetAuthors), typeof(GetAuthors));
 
                return services;
           }

@@ -1,4 +1,5 @@
-﻿using BookStore.Application.Features.Genre.Commands.Add;
+﻿using BookStore.Application.Features.Author.Commands.Add;
+using BookStore.Application.Features.Genre.Commands.Add;
 using BookStore.Application.Features.Login.Commands.Login;
 using BookStore.Application.Features.Role.Commands.Add;
 using BookStore.Application.Features.Role.Queries.Get;
@@ -24,6 +25,7 @@ public static class ApplicationServiceRegistration
           services.AddTransient<IValidator<AddUserCommand>, AddUserCommandValidator>();
           services.AddTransient<IValidator<LoginCommand>, LoginCommandValidator>();
           services.AddTransient<IValidator<SetRoleCommand>, SetRoleCommandValidator>();
+          services.AddTransient<IValidator<AddAuthorCommand>, AddAuthorCommandValidator>();
           services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
      }
 }

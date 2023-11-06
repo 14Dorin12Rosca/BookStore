@@ -4,45 +4,58 @@
         <name>BookStore.Api</name>
     </assembly>
     <members>
+        <member name="M:BookStore.Api.Author.AuthorController.Create(BookStore.Application.Features.Author.AddAuthorRequest)">
+            <summary>
+            add a new author
+            </summary>
+            <param name="request">the request to add a new author</param>
+            <returns>the created author</returns>
+        </member>
+        <member name="M:BookStore.Api.Author.AuthorController.Get">
+            <summary>
+            get list of authors.
+            </summary>
+            <returns> list of authors with their books</returns>
+        </member>
         <member name="M:BookStore.Api.Genre.GenreController.Create(BookStore.Application.Features.Genre.CreateGenreRequest)">
             <summary>
-            Creates a new genre.
+            creates a new genre
             </summary>
-            <param name="request">The request to create a genre.</param>
-            <returns>The created genre.</returns>
+            <param name="request">the request to create a genre</param>
+            <returns>the created genre</returns>
         </member>
         <member name="M:BookStore.Api.Genre.GenreController.Get">
             <summary>
-            Get List Of Genres.
+            get list of genres.
             </summary>
-            <returns> List of Genres </returns>
+            <returns> list of genres with their books</returns>
         </member>
         <member name="M:BookStore.Api.Role.RoleController.Create(BookStore.Application.Features.Role.CreateRoleRequest)">
             <summary>
-            Creates a new Role.
+            creates a new role
             </summary>
-            <param name="request">The request to create a Role.</param>
-            <returns>The created Role.</returns>
+            <param name="request">the request to create a role</param>
+            <returns>the created role</returns>
         </member>
         <member name="M:BookStore.Api.Role.RoleController.Get(System.Guid)">
             <summary>
-            Get a role by id.
+            get a role by id
             </summary>
-            <param name="id">The Id of requested role.</param>
-            <returns>The Role data if it exist.</returns>
+            <param name="id">the id of requested role</param>
+            <returns>the role data if it exist</returns>
         </member>
         <member name="M:BookStore.Api.Role.RoleController.Get">
             <summary>
-            Get a list of roles.
+            get a list of roles.
             </summary>
-            <returns>The Role data if it exist.</returns>
+            <returns>the role data if it exist</returns>
         </member>
         <member name="M:BookStore.Api.User.RegisterController.Create(BookStore.Application.Features.User.CreateUserRequest)">
             <summary>
-            Register a new user.
+            register a new user
             </summary>
-            <param name="request">The request to create a user.</param>
-            <returns>The created user data</returns>
+            <param name="request">the request to create a user</param>
+            <returns>the created user data</returns>
         </member>
         <member name="M:BookStore.Api.User.UserController.Login(BookStore.Application.Features.Login.LoginRequest)">
             <summary>

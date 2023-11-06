@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BookStore.DataBase.Configurations
 {
-     internal class AuthorConfiguration : IEntityTypeConfiguration<Author>
+     internal class AuthorConfiguration : IEntityTypeConfiguration<Domain.Entities.Author>
      {
-          public void Configure(EntityTypeBuilder<Author> builder)
+          public void Configure(EntityTypeBuilder<Domain.Entities.Author> builder)
           {
                builder.ToTable(nameof(Author));
                builder.HasKey(a => a.Id);

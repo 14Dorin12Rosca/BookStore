@@ -15,6 +15,8 @@ namespace BookStore.Application.Features.Genre.Commands.Add
             RuleFor(g => g.Description)
                  .NotNull().WithMessage("The genre name is required")
                  .NotEmpty().WithMessage("The genre name cannot be empty");
-        }
-    }
+            //check if author already exist
+
+          }
+     }
 }

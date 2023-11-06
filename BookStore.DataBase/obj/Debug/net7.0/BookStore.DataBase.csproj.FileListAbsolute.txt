@@ -17,11 +17,6 @@ C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.DataBase\obj\Debug\net7.0\refin
 C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.pdb
 C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.genruntimeconfig.cache
 C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.DataBase\obj\Debug\net7.0\ref\BookStore.DataBase.dll
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.csproj.AssemblyReference.cache
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.AssemblyInfoInputs.cache
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.AssemblyInfo.cs
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\bin\Debug\net7.0\BookStore.DataBase.deps.json
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\bin\Debug\net7.0\BookStore.DataBase.runtimeconfig.json
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\bin\Debug\net7.0\BookStore.DataBase.dll
@@ -30,6 +25,11 @@ C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\bin\Debug\net7.0
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\bin\Debug\net7.0\BookStore.Domain.dll
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\bin\Debug\net7.0\BookStore.Application.pdb
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\bin\Debug\net7.0\BookStore.Domain.pdb
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.AssemblyInfo.cs
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.csproj.CopyComplete
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\BookStore.DataBase.dll
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.DataBase\obj\Debug\net7.0\refint\BookStore.DataBase.dll

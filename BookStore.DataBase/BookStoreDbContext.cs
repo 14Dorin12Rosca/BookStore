@@ -6,7 +6,7 @@ namespace BookStore.DataBase
 {
      public class BookStoreDbContext :DbContext
      {
-          public virtual DbSet<Author> Author { get; set; }
+          public virtual DbSet<Domain.Entities.Author> Author { get; set; }
           public virtual DbSet<Book> Book { get; set; }
           public virtual DbSet<Domain.Entities.Genre> Genre { get; set; }
           public virtual DbSet<Role> Role { get; set; }

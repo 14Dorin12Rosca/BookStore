@@ -266,12 +266,6 @@ C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.Api\obj\Debug\net7.0\refint\Boo
 C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.pdb
 C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.genruntimeconfig.cache
 C:\Users\Asus\Desktop\OpenLM\BookStore\BookStore.Api\obj\Debug\net7.0\ref\BookStore.Api.dll
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.csproj.AssemblyReference.cache
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.AssemblyInfoInputs.cache
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.AssemblyInfo.cs
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.csproj.CoreCompileInputs.cache
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\appsettings.json
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\BookStore.Api.exe
@@ -523,6 +517,13 @@ C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\Book
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\BookStore.DataBase.pdb
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\BookStore.Infrastructure.pdb
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\bin\Debug\net7.0\BookStore.Domain.pdb
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.AssemblyInfo.cs
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\staticwebassets\msbuild.BookStore.Api.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.BookStore.Api.props
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.BookStore.Api.props
@@ -538,4 +539,3 @@ C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\Book
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.pdb
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.genruntimeconfig.cache
 C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\ref\BookStore.Api.dll
-C:\Users\Asus\Desktop\OpenLM\Tasks\BookStore\BookStore.Api\obj\Debug\net7.0\BookStore.Api.MvcApplicationPartsAssemblyInfo.cs

@@ -11,6 +11,7 @@ namespace BookStore.DataBase
           public virtual DbSet<Domain.Entities.Genre> Genre { get; set; }
           public virtual DbSet<Role> Role { get; set; }
           public virtual DbSet<Domain.Entities.User> User { get; set; }
+          //public virtual DbSet<BookUser> BookUser { get; set; }
 
           public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options) : base(options) { }
           protected override void OnModelCreating(ModelBuilder modelBuilder)

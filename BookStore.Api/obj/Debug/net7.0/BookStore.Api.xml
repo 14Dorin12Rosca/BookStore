@@ -57,6 +57,13 @@
             <param name="request">the request that have id of supplied book and quantity</param>
             <returns>the result of operation</returns>
         </member>
+        <member name="M:BookStore.Api.Book.BookController.Buy(System.Guid)">
+            <summary>
+            buy a book
+            </summary>
+            <param name="id">the the id of book</param>
+            <returns>the result of operation</returns>
+        </member>
         <member name="M:BookStore.Api.Genre.GenreController.Create(BookStore.Application.Features.Genre.CreateGenreRequest)">
             <summary>
             creates a new genre

@@ -1,4 +1,5 @@
-﻿using BookStore.Application.Features.Book;
+﻿using System.Security.Authentication;
+using BookStore.Application.Features.Book;
 using BookStore.Application.Features.Book.Commands.Add;
 using BookStore.Application.Features.Book.Commands.Delete;
 using BookStore.Application.Features.Book.Commands.Supply;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Security.Claims;
+using BookStore.Application.Features.Book.Commands.Buy;
 
 namespace BookStore.Api.Book
 {
@@ -138,9 +140,14 @@ namespace BookStore.Api.Book
           public async Task<IActionResult> Buy(Guid id)
           {
                var userEmail = HttpContext.User.FindFirst(ClaimTypes.Email)?.Value;
-               var cmd = new BuyBookCommand(id,userEmail);
-               var result = await _mediator.Send(cmd);
-               return Ok(result);
+               if (userEmail != null)
+               {
+                    var cmd = new BuyBookCommand(id,userEmail);
+                    var result = await _mediator.Send(cmd);
+                    return Ok(result);
+               }
+
+               throw new AuthenticationException();
           }
      }
 }

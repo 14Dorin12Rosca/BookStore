@@ -23,7 +23,7 @@
             </summary>
             <returns> list of books with their author and genre</returns>
         </member>
-        <member name="M:BookStore.Api.Book.BookController.GetById">
+        <member name="M:BookStore.Api.Book.BookController.GetById(System.Guid)">
             <summary>
             get book details by id.
             </summary>
@@ -48,6 +48,13 @@
             delete a existing book
             </summary>
             <param name="id">the id of deleted book</param>
+            <returns>the result of operation</returns>
+        </member>
+        <member name="M:BookStore.Api.Book.BookController.Supply(BookStore.Application.Features.Book.BookSupplyRequest)">
+            <summary>
+            supply the reserves of books
+            </summary>
+            <param name="request">the request that have id of supplied book and quantity</param>
             <returns>the result of operation</returns>
         </member>
         <member name="M:BookStore.Api.Genre.GenreController.Create(BookStore.Application.Features.Genre.CreateGenreRequest)">

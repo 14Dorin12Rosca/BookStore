@@ -1,6 +1,7 @@
 ﻿using BookStore.Application.Features.Author.Commands.Add;
 using BookStore.Application.Features.Book.Commands.Add;
 using BookStore.Application.Features.Book.Commands.Delete;
+using BookStore.Application.Features.Book.Commands.Supply;
 using BookStore.Application.Features.Book.Commands.Update;
 using BookStore.Application.Features.Book.Queries.GetBook;
 using BookStore.Application.Features.Genre.Commands.Add;
@@ -34,6 +35,7 @@ public static class ApplicationServiceRegistration
           services.AddTransient<IValidator<AddBookCommand>, AddBookCommandValidator>();
           services.AddTransient<IValidator<UpdateBookCommand>, UpdateBookCommandValidator>();
           services.AddTransient<IValidator<DeleteBookCommand>, DeleteBookCommandValidator>();
+          services.AddTransient<IValidator<SupplyBookCommand>, SupplyBookCommandValidator>();
           services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
      }
 }

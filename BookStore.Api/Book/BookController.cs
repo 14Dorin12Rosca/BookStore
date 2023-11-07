@@ -1,11 +1,15 @@
 ﻿using BookStore.Application.Features.Book;
 using BookStore.Application.Features.Book.Commands.Add;
 using BookStore.Application.Features.Book.Commands.Delete;
+using BookStore.Application.Features.Book.Commands.Supply;
+using BookStore.Application.Features.Book.Commands.Update;
 using BookStore.Application.Features.Book.Queries;
+using BookStore.Application.Features.Book.Queries.GetBook;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Security.Claims;
 
 namespace BookStore.Api.Book
 {
@@ -41,9 +45,9 @@ namespace BookStore.Api.Book
           [SwaggerResponse(StatusCodes.Status200OK, "The book was returned", typeof(IEnumerable<BookDto>))]
           [SwaggerResponse(StatusCodes.Status500InternalServerError, "Database Error")]
           [HttpGet("{id}")]
-          public async Task<IActionResult> GetById()
+          public async Task<IActionResult> GetById( Guid id)
           {
-               var cmd = new GetBooksQuery();
+               var cmd = new GetBookQuery(id);
                var result = await _mediator.Send(cmd);
                return Ok(result);
           }
@@ -75,11 +79,11 @@ namespace BookStore.Api.Book
           [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
           [SwaggerResponse(StatusCodes.Status401Unauthorized, "Unauthorized action")]
           [SwaggerResponse(StatusCodes.Status500InternalServerError, "Database Error")]
-          [HttpPatch]
+          [HttpPut]
           [Authorize(Roles = "Admin")]
           public async Task<IActionResult> Update([FromBody] UpdateBookRequest request)
           {
-               var cmd = new UpdateBookRequest();
+               var cmd = new UpdateBookCommand(request);
                var result = await _mediator.Send(cmd);
                return Ok(result);
           }
@@ -98,6 +102,43 @@ namespace BookStore.Api.Book
           public async Task<IActionResult> Delete(Guid id)
           {
                var cmd = new DeleteBookCommand(id);
+               var result = await _mediator.Send(cmd);
+               return Ok(result);
+          }
+
+          /// <summary>
+          /// supply the reserves of books
+          /// </summary>
+          /// <param name="request">the request that have id of supplied book and quantity</param>
+          /// <returns>the result of operation</returns>
+          [SwaggerResponse(StatusCodes.Status200OK, "The result of operation", typeof(BookDto))]
+          [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
+          [SwaggerResponse(StatusCodes.Status401Unauthorized, "Unauthorized action")]
+          [SwaggerResponse(StatusCodes.Status500InternalServerError, "Database Error")]
+          [HttpPatch("supply")]
+          [Authorize(Roles = "Admin")]
+          public async Task<IActionResult> Supply(BookSupplyRequest request)
+          {
+               var cmd = new SupplyBookCommand(request);
+               var result = await _mediator.Send(cmd);
+               return Ok(result);
+          }
+
+          /// <summary>
+          /// buy a book
+          /// </summary>
+          /// <param name="id">the the id of book</param>
+          /// <returns>the result of operation</returns>
+          [SwaggerResponse(StatusCodes.Status200OK, "The result of operation", typeof(bool))]
+          [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
+          [SwaggerResponse(StatusCodes.Status401Unauthorized, "Unauthorized action")]
+          [SwaggerResponse(StatusCodes.Status500InternalServerError, "Database Error")]
+          [HttpPost("id")]
+          [Authorize(Roles = "Admin")]
+          public async Task<IActionResult> Buy(Guid id)
+          {
+               var userEmail = HttpContext.User.FindFirst(ClaimTypes.Email)?.Value;
+               var cmd = new BuyBookCommand(id,userEmail);
                var result = await _mediator.Send(cmd);
                return Ok(result);
           }

@@ -33,7 +33,7 @@ namespace BookStore.Application.Features.Book.Commands.Add
             {
                 throw new ValidationException(validation.Errors);
             }
-            var genre = new Domain.Entities.Book
+            var book = new Domain.Entities.Book
             {
                  Id = Guid.NewGuid(),
                  Title = request.Title,
@@ -43,7 +43,7 @@ namespace BookStore.Application.Features.Book.Commands.Add
                  AuthorId = request.AuthorId,
                  GenreId = request.GenreId
             };
-            var result = await _addEntity.InsertAsync(genre);
+            var result = await _addEntity.InsertAsync(book);
             //to change
             if (result != null)
                 return new BookDto()

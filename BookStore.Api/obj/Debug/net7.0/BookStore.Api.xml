@@ -17,6 +17,39 @@
             </summary>
             <returns> list of authors with their books</returns>
         </member>
+        <member name="M:BookStore.Api.Book.BookController.Get">
+            <summary>
+            get list of books.
+            </summary>
+            <returns> list of books with their author and genre</returns>
+        </member>
+        <member name="M:BookStore.Api.Book.BookController.GetById">
+            <summary>
+            get book details by id.
+            </summary>
+            <returns> a book data with author and genre</returns>
+        </member>
+        <member name="M:BookStore.Api.Book.BookController.Create(BookStore.Application.Features.Book.CreateBookRequest)">
+            <summary>
+            creates a new book
+            </summary>
+            <param name="request">the request to create a book</param>
+            <returns>the created book</returns>
+        </member>
+        <member name="M:BookStore.Api.Book.BookController.Update(BookStore.Application.Features.Book.UpdateBookRequest)">
+            <summary>
+            updates a existing book
+            </summary>
+            <param name="request">the request to update a book</param>
+            <returns>the updated book</returns>
+        </member>
+        <member name="M:BookStore.Api.Book.BookController.Delete(System.Guid)">
+            <summary>
+            delete a existing book
+            </summary>
+            <param name="id">the id of deleted book</param>
+            <returns>the result of operation</returns>
+        </member>
         <member name="M:BookStore.Api.Genre.GenreController.Create(BookStore.Application.Features.Genre.CreateGenreRequest)">
             <summary>
             creates a new genre

@@ -17,12 +17,5 @@ namespace BookStore.DataBase.Common
                await using var ctx = await _factory.CreateDbContextAsync();
                return await ctx.FindAsync<TEntity>(id);
           }
-
-          public async Task<TEntity?> GetAsync<T, TIncluded>(T id)
-          {
-               await using var ctx = await _factory.CreateDbContextAsync();
-               var result = ctx.Set<TEntity>().Include(e => e);
-               return (TEntity?)result;
-          }
      }
 }

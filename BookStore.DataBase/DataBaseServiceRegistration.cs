@@ -38,6 +38,7 @@ namespace BookStore.DataBase
                services.AddScoped(typeof(IGetAuthors), typeof(GetAuthors));
                //Book
                services.AddScoped(typeof(IGetBooks), typeof(GetBooks));
+               services.AddScoped(typeof(IGetBook), typeof(GetBook));
 
                return services;
           }

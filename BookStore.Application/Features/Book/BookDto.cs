@@ -1,4 +1,5 @@
-﻿using BookStore.Application.Features.Genre;
+﻿using BookStore.Application.Features.Author;
+using BookStore.Application.Features.Genre;
 using BookStore.Application.Features.User;
 using BookStore.Domain.Entities;
 
@@ -14,7 +15,7 @@ namespace BookStore.Application.Features.Book
           public Guid? AuthorId { get; set; }
           public Guid? GenreId { get; set; }
 
-          public Domain.Entities.Author? Author { get; set; }
+          public AuthorDto? Author { get; set; }
           public GenreDto? Genre { get; set; }
           public ICollection<UserDto>? Users { get; set; }
      }

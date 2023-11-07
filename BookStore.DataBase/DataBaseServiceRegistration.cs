@@ -1,10 +1,12 @@
 ﻿using BookStore.Application.Contracts.Author;
+using BookStore.Application.Contracts.Book;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using BookStore.Application.Contracts.DataBase;
 using BookStore.Application.Contracts.Genre;
 using BookStore.Application.Contracts.User;
 using BookStore.DataBase.Author;
+using BookStore.DataBase.Book;
 using BookStore.DataBase.Common;
 using BookStore.DataBase.Genre;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +36,8 @@ namespace BookStore.DataBase
                services.AddScoped(typeof(IGetGenres), typeof(GetGenres));
                //Author
                services.AddScoped(typeof(IGetAuthors), typeof(GetAuthors));
+               //Book
+               services.AddScoped(typeof(IGetBooks), typeof(GetBooks));
 
                return services;
           }

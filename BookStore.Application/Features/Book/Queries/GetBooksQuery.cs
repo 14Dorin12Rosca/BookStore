@@ -20,7 +20,7 @@ namespace BookStore.Application.Features.Book.Queries
           {
                var books = await _getBooks.GetAsync();
                var enumerable = books.ToList();
-               if (enumerable.Any())
+               /*if (enumerable.Any())
                {
                     var result = enumerable.Select(book => new BookDto
                     {
@@ -46,7 +46,7 @@ namespace BookStore.Application.Features.Book.Queries
                          
                     }).ToList();
                     return result;
-               }
+               }*/
 
                throw new NotFoundException();
           }
